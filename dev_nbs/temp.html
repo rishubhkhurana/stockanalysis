@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSDCH65FCH"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-VSDCH65FCH');
+
+	if ( window.history.replaceState ) {
+	  window.history.replaceState( null, null, window.location.href );
+	}  
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+ <link rel="stylesheet" href="assets/DarkTheme.css?version=2">	
+ <link href="sm-core-css.css" rel="stylesheet" type="text/css" />
+ <link href="blue.css" rel="stylesheet" type="text/css" />
+ 
+<link rel="stylesheet" href="/opt/css/Material_icon.css?4">
+<link rel="stylesheet" href="assets/mdl/material.indigo-pink.min.css?4">
+<script  src="assets/mdl/material.min.js?4"></script>
+
+     <!-- jQuery -->
+    <script type="text/javascript" src="jquery2.js"></script>
+	<script src="/opt/js/DarkTheme.js?8"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>		
+.main-menu-btn {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  text-indent: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* hamburger icon */
+.main-menu-btn-icon, .main-menu-btn-icon:before, .main-menu-btn-icon:after {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  height: 2px;
+  width: 24px;
+  background: #bbb;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.main-menu-btn-icon:before {
+  content: '';
+  top: -7px;
+  left: 0;
+}
+.main-menu-btn-icon:after {
+  content: '';
+  top: 7px;
+  left: 0;
+}
+/* x icon */
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+  height: 0;
+  background: transparent;
+}
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* hide menu state checkbox (keep it visible to screen readers) */
+#main-menu-state {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+}
+/* hide the menu in mobile view */
+#main-menu-state:not(:checked) ~ #main-menu {
+  display: none;
+}
+#main-menu-state:checked ~ #main-menu {
+  display: block;
+}
+@media (min-width: 1200px) {
+  /* hide the button in desktop view */
+  .main-menu-btn {
+    position: absolute;
+    top: -99999px;
+  }
+  /* always show the menu in desktop view */
+  #main-menu-state:not(:checked) ~ #main-menu {
+    display: block;
+  }
+  .telegramclass
+  {
+	float:right!important;  
+  }
+}
+
+.logoClass{
+    position: absolute;
+    top: 10px;
+    left: 140px;
+    /* height: 2px; background: #BBB1A3;*/
+    width: 100px;
+    color: #1890CC;
+	font-weight: bold;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+	font-family:'Roboto Condensed';
+}
+
+.responsive {text-align: center;}
+.responsive img { max-width: 100%;}
+
+</style>		
+</head>
+<body>
+
+    <nav id="main-nav">
+ 
+	<!-- Mobile menu toggle button (hamburger/x icon) -->
+	<input id="main-menu-state" type="checkbox" />
+	<label class="main-menu-btn" for="main-menu-state">
+	  <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+	</label>
+	 <!--<span class="logoClass" style='white-space: nowrap;'>Options Analysis</span> -->
+	<!-- Sample menu definition -->
+      <ul id="main-menu" class="sm sm-blue">
+        <li><a href="/opt/index.php">Home</a></li>
+
+		<li><a href="#">Futures</a>
+		  <ul>
+			<li><a href="/opt/FuturesChart.php">Futures Chart</a></li>
+			<li><a href="/opt/FuturesOIBuildup.php">Futures OI Buildup</a></li>
+			<li><a href="/opt/FuturesOIScan.php">Futures OI Scan</a></li>
+			<li><a href="/opt/FuturesOIBreakup.php">Futures OI Breakup</a></li>
+			<li><a href="/opt/IVR-IVP-Scan.php">IVR-IVP Scan</a></li>
+		  </ul>
+		</li>
+
+		<li><a href="#">Options</a>
+		  <ul>
+			<li><a href="/opt/OptionsChart.php">Options Chart</a></li>
+			<li><a href="/opt/OptionChain.php">Options Chain</a></li>
+			<li><a href="/opt/OptionOIStats.php">OI Stats</a></li>
+			<li><a href="/opt/OptionSnapshot.php">Option Snapshot</a></li>
+			<li><a href="/opt/OptionsOIBreakup.php">Options OI Breakup</a></li>
+			<li><a href="/opt/OptionsMonitor.php">Price vs OI</a></li>
+			<li><a href="/opt/OIMonitor.php">Multi Strike OI</a></li>
+			<li><a href="/opt/CumulativeOIChange.php">Cumulative OI Change</a></li>
+			<li><a href="/opt/PutCallOITotal.php">Total PE-CE OI</a></li>
+			<li><a href="/opt/MaxPain.php">Max Pain</a></li>
+			<li><a href="/opt/VolatilitySkew.php">Volatility Skew</a></li>
+			<li><a href="/opt/iv.php">IV Chart</a></li>
+			<li><a href="/opt/iv_hv.php">IV-HV Chart</a></li>
+			<li><a href="/opt/ivr.php">IVR-IVP Chart</a></li>
+		  </ul>
+		</li>
+		
+        <li><a href="#">Strategies</a>
+          <ul>
+            <li><a href="#">Straddle / Strangle</a>
+              <ul>
+                <li><a href="/opt/StraddleSnapshot.php">Straddle Snapshot</a></li>
+                <li><a href="/opt/StraddleCharts.php">Straddle Charts</a></li>
+                <li><a href="/opt/StraddleWatch.php">Straddle Watch</a></li>
+                <li><a href="/opt/StraddleChartsPlus.php">Straddle Charts Plus</a></li>
+                <li><a href="/opt/StraddleComboCharts.php">Straddle Combo Charts</a></li>
+              </ul>
+            </li>
+
+            <li><a class="sub-menu"  href="#">Spreads</a>
+              <ul>
+                <li><a href="/opt/SpreadChart.php">Spread Chart</a></li>
+              </ul>
+            </li>
+			<li><a href="/opt/Butterfly.php">Butterfly</a></li>
+			<li><a href="/opt/IronButterfly.php">Iron Condor / Iron Fly</a></li>
+
+          </ul>
+		  
+        </li>
+
+        <li><a href="#">Help</a>
+			  <ul>
+				<li><a href="https://youtu.be/PDvHnh5cR3M" target='blank'>Video 1 - Introduction</a></li>
+				<li><a href="https://youtu.be/Lrwt6fxPJhI" target='blank'>Video 2 - Price Vs OI</a></li>
+				<li><a href="https://youtu.be/Ri1vks2mkeM" target='blank'>Video 3 - Futures OI Scan</a></li>
+				<li><a href="/opt/Documentation.php">Documentation</a></li>
+				<li><a href="/opt/WebsiteUpdates.php">Website Updates</a></li>
+				<li><a href="/opt/Disclaimer.php">Disclaimer</a></li>
+			  </ul>
+		</li>
+
+		
+		<li><a href="/opt/SubscriptionDetails.php">Subscription Details</a></li>
+
+
+							<li><a href="/opt/login.php">Login</a></li>
+			<li class='telegramclass'><a href="https://telegram.me/ichartsoptionstools">Telegram Channel (Help/Support) &nbsp;<i class="fa" style='font-size:23px;'>&#xf2c6;</i></a></li>
+      </ul>
+    </nav>	
+	
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="jquery.smartmenus.js"></script>
+    <!-- SmartMenus jQuery init -->
+    <script type="text/javascript">
+		
+		$(function() {
+		  var $mainMenuState = $('#main-menu-state');
+		  if ($mainMenuState.length) {
+			// animate mobile menu
+			$mainMenuState.change(function(e) {
+			  var $menu = $('#main-menu');
+			  if (this.checked) {
+				$menu.hide().slideDown(250, function() { $menu.css('display', ''); });
+			  } else {
+				$menu.show().slideUp(250, function() { $menu.css('display', ''); });
+			  }
+			});
+			// hide mobile menu beforeunload
+			$(window).on('beforeunload unload', function() {
+			  if ($mainMenuState[0].checked) {
+				$mainMenuState[0].click();
+			  }
+			});
+		  }
+		});
+    </script>
+	<br>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css?2" />
+<link rel="stylesheet" href="css/demo.css" />
+</head>
+<body>
+<div class="form">
+<h1>Log In</h1>
+<form action="" method="post" name="login">
+<input type="text" name="username" placeholder="Login ID" required />
+<input type="password" name="password" placeholder="Password" required />
+<input name="submit" type="submit" value="Login" />
+</form>
+<p>Not registered yet? <a href='register.php'>Register Here</a></p>
+<p>Forgot password? <a href='ForgotPassword.php'>Click Here</a></p>
+</div>
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="jquery.smartmenus.js"></script>
+
+    <!-- SmartMenus jQuery init -->
+    <script type="text/javascript">
+    	$(function() {
+    		$('#main-menu').smartmenus({
+    			subMenusSubOffsetX: 1,
+    			subMenusSubOffsetY: -8,
+				showTimeout: 10,
+				hideTimeout: 10
+    		});
+    	});
+    </script>
+</body>
+</html>

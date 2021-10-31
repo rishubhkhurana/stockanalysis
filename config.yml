@@ -1,0 +1,6 @@
+data:
+  framework: 'alphavantage'
+  start: '01/01/2010'
+  end: '01/10/2021'
+  country: 'United States'
+  ticker: 'AAPL'
