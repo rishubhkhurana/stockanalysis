@@ -14,13 +14,16 @@ if __name__ == '__main__':
     end = config['data']['end']
     country = config['data']['country']
     framework = config['data']['framework']
+    typ = config['data']['typ']
     # printing the log
     print("Config options for data:")
+    print(f"Asset type: {typ}")
     print(f"Ticker: {ticker}")
     print(f'framework: {framework}')
     print(f"start date: {start}")
     print(f"end date: {end}")
     print(f'country: {country}')
+
 
     df = get_daily_historical_data(ticker,
                                    framework=framework,
