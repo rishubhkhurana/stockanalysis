@@ -6,7 +6,7 @@ from data.namemapping import *
 import mplfinance as mfin
 import matplotlib.pyplot as plt
 
-st.title("Let's make money")
+st.title("Let'strategy make money")
 st.header('Probabilistic Trading Dashboard')
 st.subheader('')
 ticker = st.sidebar.selectbox("Ticker select", tickerlist)

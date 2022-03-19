@@ -11,7 +11,7 @@ def test_normality(data: np.ndarray) -> dict:
     Function to run normality tests on observed data
     :param data: an array containing observed random variable values. dtype: np.ndarray
     :return:
-    results_dict: a dictionary containing different parameters of test keyed by respective test's name
+    results_dict: a dictionary containing different parameters of test keyed by respective test'strategy name
     '''
     assert isinstance(data, np.ndarray)
     # check if there are any nans
@@ -82,8 +82,8 @@ def run_normality_test(data: np.ndarray, alpha=0.05):
         results['RejectHypothesis'].append(False)
         print(f"Shapiro fails to reject the Hypothesis of Gaussian(p:{results_dict['shapiro']['pvalue']:.2f})")
     print("#" * 20)
-    print("Results from D`Augostino's K^2 tests:")
-    results['test_name'].append("D`Augostino's K^2")
+    print("Results from D`Augostino'strategy K^2 tests:")
+    results['test_name'].append("D`Augostino'strategy K^2")
     results['statistic'].append(results_dict["d_augostino"]['statistic'])
     results['pvalue'].append(results_dict["d_augostino"]['pvalue'])
     results['test_extra_statistics'].append("NA")
