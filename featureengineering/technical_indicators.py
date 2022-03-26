@@ -82,6 +82,13 @@ def all_trend_indicators(data: pd.DataFrame,
     else:
         pass
 
+def add_rsi(data: pd.DataFrame, api: str = 'ta', window: int = 14, column: str='Close'):
+    if api=='pandas_ta':
+        data[f'{column}_rsi_{window}'] = pandas_ta.rsi(data[column], length=window)
+    elif api == 'ta':
+        rsi = ta.momentum.RSIIndicator(data[column], window=window)
+        data[f'{column}_rsi_{window}'] = rsi.rsi()
+
 
 def all_volatility_indicators(data: pd.DataFrame,
                    api: str = 'ta'):
