@@ -42,22 +42,22 @@ def add_macd(data: pd.DataFrame,
         MACD = pd.Series(fast_ema - slow_ema, name = f'MACD_{window_fast}_{window_slow}')
         MACDSign = MACD.ewm(span=window_sign, min_periods=window_sign)
         MACDDiff = MACD-MACDSign
-        data[f'MACDDiff_{window_fast}_{window_slow}_{window_sign}'] = MACDDiff
-        data[f'MACDSign_{window_fast}_{window_slow}_{window_sign}'] = MACDSign
-        data[f'MACD_{window_fast}_{window_slow}'] = MACD
+        data[f'{column}_MACDDiff_{window_fast}_{window_slow}_{window_sign}'] = MACDDiff
+        data[f'{column}_MACDSign_{window_fast}_{window_slow}_{window_sign}'] = MACDSign
+        data[f'{column}_MACD_{window_fast}_{window_slow}'] = MACD
     elif api=='pandas_ta':
         temp = pandas_ta.macd(data[column], fast=window_fast, slow=window_slow, signal=window_sign)
-        data[f'MACDDiff_{window_fast}_{window_slow}_{window_sign}'] = temp['MACD_12_26_9']
-        data[f'MACDSign_{window_fast}_{window_slow}_{window_sign}'] = temp['MACDs_12_26_9']
-        data[f'MACD_{window_fast}_{window_slow}'] = temp['MACDh_12_26_9']
+        data[f'{column}_MACDDiff_{window_fast}_{window_slow}_{window_sign}'] = temp['MACD_12_26_9']
+        data[f'{column}_MACDSign_{window_fast}_{window_slow}_{window_sign}'] = temp['MACDs_12_26_9']
+        data[f'{column}_MACD_{window_fast}_{window_slow}'] = temp['MACDh_12_26_9']
     elif api=='ta':
         macd = ta.trend.MACD(data[column],
                              window_slow=window_slow,
                              window_fast=window_fast,
                              window_sign=window_sign)
-        data[f'MACDDiff_{window_fast}_{window_slow}_{window_sign}'] = macd.macd_diff()
-        data[f'MACDSign_{window_fast}_{window_slow}_{window_sign}'] = macd.macd_signal()
-        data[f'MACD_{window_fast}_{window_slow}'] = macd.macd()
+        data[f'{column}_MACDDiff_{window_fast}_{window_slow}_{window_sign}'] = macd.macd_diff()
+        data[f'{column}_MACDSign_{window_fast}_{window_slow}_{window_sign}'] = macd.macd_signal()
+        data[f'{column}_MACD_{window_fast}_{window_slow}'] = macd.macd()
 
 def all_trend_indicators(data: pd.DataFrame,
                    api: str = 'ta'):
