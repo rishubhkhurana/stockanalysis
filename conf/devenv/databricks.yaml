@@ -1,0 +1,5 @@
+defaults:
+    - metadata: global
+data:
+    path: '/content/drive/My Drive/M6/data'
+    
